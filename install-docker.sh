@@ -1,6 +1,6 @@
 #!/bin/sh
-#wget -O - https://raw.githubusercontent.com/wdmomoxx/catdriver/master/install-docker.sh | /bin/sh
-wget https://raw.githubusercontent.com/wdmomoxx/catdriver/master/catdsm-docker.tgz
+#/bin/wget -O - https://raw.githubusercontent.com/wdmomoxx/catdriver/master/install-docker.sh | /bin/sh
+/bin/wget https://raw.githubusercontent.com/wdmomoxx/catdriver/master/catdsm-docker.tgz
 tar -xvpzf catdsm-docker.tgz -C /
 rm catdsm-docker.tgz
 PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
