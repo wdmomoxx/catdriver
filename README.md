@@ -7,4 +7,4 @@ catdriver dsm docker support
 
 首先创建一个macvlan类型的testnet
 
-sudo docker network create --driver=macvlan --gateway=192.168.22.55 --subnet=192.168.22.0/24 --ip-range=192.168.22.48/28 -o parent=eth0 testnet
+sudo docker network create --driver=macvlan --gateway=192.168.22.55 --subnet=192.168.22.0/24 --ip-range=192.168.22.48/28 -o macvlan_mode=bridge -o parent=eth0 macvlan
