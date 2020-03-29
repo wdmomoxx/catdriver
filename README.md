@@ -12,4 +12,4 @@ sudo docker network create --driver=macvlan --gateway=192.168.22.55 --subnet=192
 
 #3.pihole.sh 使用macvlan启动pihole
 
-待解决的问题:使用macvlan中的container，会出现dns错误，需要手动改一下/etc/resolv.conf，待解决!!!
+待解决的问题:使用macvlan中的container，会出现dns错误，需要手动改一下echo "nameserver xx.xx.xx.xx" > /etc/resolv.conf，待解决!!!
