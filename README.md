@@ -4,9 +4,9 @@ catdriver dsm docker support
 ```
 #1.在原fork的基础上，将docker 改为支持aufs，这样启动速度好很多。
 
-需要使用/opt/etc/init.d/Dockerd可以不用了，改为Task scheduler 用脚本启动，,需要/etc/docker/daemon.json覆盖掉原来的。
+/opt/etc/init.d/Dockerd可以不用了，改为Task scheduler 用脚本启动，,需要/etc/docker/daemon.json覆盖掉原来的。
 新建一任务，owner--->root,application--->User define script,Task--->boot dockerd,Action--->User define script,Event--->Boot-up,
-Pre-task--->Entware,脚本使用boot_dockerd.script中命令。
+Pre-task--->Entware,脚本使用dockerd_start.script中命令。
 
 
 
