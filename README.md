@@ -14,6 +14,8 @@ Pre-task--->Entware,脚本使用dockerd_start.script中命令。
 
 #3.pihole.sh 使用macvlan启动pihole
 
+又发现新问题，好象dockerd的路径没在entware中，造成不能顺昨启动，有空再解决
+
 待解决的问题:使用macvlan中的container，会出现dns错误，需要手动改一下echo "nameserver xx.xx.xx.xx" > /etc/resolv.conf，待解决!!!
 !!!!升级到最新的DSM 6.2.3-25426，奇迹般的正常，估计是新固件自动启动了一些有用的模块xx.ko
 
