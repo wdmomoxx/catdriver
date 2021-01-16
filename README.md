@@ -2,6 +2,10 @@ catdriver dsm docker support
 ```
 /bin/wget -O - https://raw.githubusercontent.com/wdmomoxx/catdriver/master/install-docker.sh | /bin/sh
 ```
+forked from wdmomoxx/catdriver
+不太适合小白，由于精力有限，没有太完善
+但可以保证的是猫盘能够很好的的用docker!!
+
 #1.在原fork的基础上，将docker 改为支持aufs，这样启动速度好很多。
 
 /opt/etc/init.d/Dockerd可以不用了，改为Task scheduler 用脚本启动，,需要/etc/docker/daemon.json覆盖掉原来的。
