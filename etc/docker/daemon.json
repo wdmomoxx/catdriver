@@ -1,0 +1,6 @@
+{
+  "storage-driver": "aufs",
+  "graph":"/opt/var/lib/docker",
+  "experimental": true,
+  "registry-mirrors": ["https://registry.docker-cn.com"]
+}

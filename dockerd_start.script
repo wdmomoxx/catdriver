@@ -1,0 +1,19 @@
+NAME=dockerd
+DAEMON=/opt/usr/bin/$NAME
+PIDFILE=/opt/var/run/$NAME.pid
+DAEMON_ARGS="--bridge=none --iptables=false"
+PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+/usr/sbin/insmod /usr/lib/modules/macvlan.ko
+/usr/bin/ip link set eth0 promisc on
+insmod /usr/lib/modules/aufs.ko
+
+
+ip link add proxy link eth0 type macvlan mode bridge
+ip addr add 192.168.22.34/24 dev proxy
+ip link set dev proxy up
+
+#export HTTP_PROXY=socks5://192.168.22.212:1088
+#export HTTPS_PROXY=socks5://192.168.22.212:1088
+
+/opt/usr/bin/dockerd $DAEMON_ARGS &
